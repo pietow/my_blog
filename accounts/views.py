@@ -8,4 +8,3 @@ class SignUpView(CreateView):
     template_name = 'signup.html'
 
 
-
