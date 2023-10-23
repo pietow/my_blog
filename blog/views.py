@@ -34,6 +34,9 @@ class BlogCreateView(CreateView): # new
     # fields = ['title', 'author', 'body']
     form_class = BlogForm
 
+    # def get_success_url(self):
+    #     return reverse('post_detail', kwargs={'pk': self.object.pk})
+
 class BlogUpdateView(UpdateView): # new
     model = Post
     template_name = "post_edit.html"
@@ -41,5 +44,7 @@ class BlogUpdateView(UpdateView): # new
 
 class BlogDeleteView(DeleteView):
     model = Post
-    template_name = "post_delete.html"
+    # template_name = "post_delete.html"
     success_url = reverse_lazy("home")
+    
+
