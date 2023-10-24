@@ -56,6 +56,8 @@ class SessionExampleView(View):
     
     def get(self, request, *args, **kwargs):
         # Check if session_key is already set
+        print(request.user.is_authenticated)
+        print(request.META)
         if request.session.session_key:
             response_text = f"Welcome back! Your session key is: {request.session.session_key}"
         else:

@@ -40,6 +40,7 @@ class ProtectSpecificRoutesMiddleware:
             # Redirect the user to the login page or any other page
             return HttpResponseRedirect(reverse('login'))
 
-        response = self.get_response(request)
+        response = self.get_response(request) #goes to next middleware or view
         return response
+
 
