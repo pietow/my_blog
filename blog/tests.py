@@ -65,8 +65,7 @@ class BlogTests(TestCase):
 
     def test_post_updateview(self): # new
         response = self.client.post(
-            # reverse("post_edit", kwargs={"pk": self.post.pk}),
-            reverse("post_edit", args="1"), # update the post from the setUpTestData via pk 1
+            reverse("post_edit", args="1"), 
             {
                 "title": "Updated title",
                 "body": "Updated text",
